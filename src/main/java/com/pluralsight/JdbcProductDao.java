@@ -25,6 +25,7 @@ public class JdbcProductDao implements ProductDao{
             statement.setInt(1,product.getProductId());
             statement.setString(2,product.getName());
             statement.setDouble(3,product.getPrice());
+            statement.executeUpdate();
         } catch (SQLException e){
             e.printStackTrace();
         }
